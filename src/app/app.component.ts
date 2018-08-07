@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
+  nombre = 'Jorge';
+
+  arreglo = [1, 2, 3, 4, 5, 6, 7, 9, 10];
+
+  pi = Math.PI;
+
 }
