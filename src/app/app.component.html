@@ -52,6 +52,66 @@
                 <td> number:'1.0-2' </td>
                 <td> {{ pi | number:'1.0-2' }} </td>
             </tr>
+            <tr>
+                <td> {{ a }} </td>
+                <td> percent </td>
+                <td> {{ a | percent }} </td>
+            </tr>
+            <tr>
+                <td> {{ a }} </td>
+                <td> percent:'2,2-2' </td>
+                <td> {{ a | percent:'2.2-2' }} </td>
+            </tr>
+            <tr>
+                <td> {{ salario }} </td>
+                <td> curency </td>
+                <td> {{ salario | currency }} </td>
+            </tr>
+            <tr>
+                <td> {{ salario }} </td>
+                <td> curency:'EUR' </td>
+                <td> {{ salario | currency:'EUR' }} </td>
+            </tr>
+            <tr>
+                <td> {{ salario }} </td>
+                <td> curency:'EUR':false:'4.0-0' </td>
+                <td> {{ salario | currency:'EUR':false:'4.0-0' }} </td>
+            </tr>
+            <tr>
+                <td> {{ salario }} </td>
+                <td> number | number:'.2-2' </td>
+                <td> {{ salario | number:'.2-2' }} </td>
+            </tr>
+            <tr>
+                <td> {{ valorDePromesa }} </td>
+                <td> async </td>
+                <td> {{ valorDePromesa | async }} </td>
+            </tr>
+            <tr>
+                <td> {{ fecha }} </td>
+                <td> date </td>
+                <td> {{ fecha | date }} </td>
+            </tr>
+            <tr>
+                <td> {{ fecha }} </td>
+                <td> date:'medium' </td>
+                <td> {{ fecha | date:'medium' }} </td>
+            </tr>
+            <tr>
+                <td> {{ fecha }} </td>
+                <td> date:'MMMM - dd' </td>
+                <td> {{ fecha | date:'MMMM - dd' }} </td>
+            </tr>
+            <tr>
+                <td> {{ nombre2 }} </td>
+                <td> capitalizado </td>
+                <td> {{ nombre2 | capitalizado }} </td>
+            </tr>
+            <tr>
+                <td> {{ nombre2 }} </td>
+                <td> capitalizado:false </td>
+                <td> {{ nombre2 | capitalizado:false }} </td>
+            </tr>
         </tbody>
 
 
@@ -63,4 +123,10 @@
             {{ item }}
         </li>
     </ul>
+
+    <h4>JSON</h4>
+    <pre>
+        {{ jugador | json }}
+    </pre>
+
 </div>
