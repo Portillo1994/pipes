@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { resolve } from '../../node_modules/@types/q';
+import { resolve } from 'q';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +35,12 @@ export class AppComponent {
 
   valorDePromesa = new Promise( ( resolv, reject) => {
 
-    setTimeout( () => resolv('Se acabo el tiempo bob esponja'), 3500 );
+    setTimeout( () => resolv('Se acabo el tiempo'), 3500 );
   } );
+
+  video = 'IluRBvnYMoY';
+
+  mostar = true;
+
 }
 

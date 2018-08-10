@@ -75,7 +75,7 @@
             <tr>
                 <td> {{ salario }} </td>
                 <td> curency:'EUR':false:'4.0-0' </td>
-                <td> {{ salario | currency:'EUR':false:'4.0-0' }} </td>
+                <td> {{ salario | currency:'EUR' }} </td>
             </tr>
             <tr>
                 <td> {{ salario }} </td>
@@ -112,6 +112,15 @@
                 <td> capitalizado:false </td>
                 <td> {{ nombre2 | capitalizado:false }} </td>
             </tr>
+            <tr>
+                <td> {{ nombre }} </td>
+                <td> contraseña:{{ mostar }}
+                    <br>
+                    <br>
+                    <button type="button" (click)="mostar = !mostar" class=" btn btn-outline-dark">Activar/desactivar</button>
+                </td>
+                <td> {{ nombre | contrasena:mostar }} </td>
+            </tr>
         </tbody>
 
 
@@ -128,5 +137,11 @@
     <pre>
         {{ jugador | json }}
     </pre>
+
+    <h4>Youtube <small>video</small></h4>
+    <hr>
+    <iframe width="560" height="315" [src]=" video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <br><br><br><br>
 
 </div>
